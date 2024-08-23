@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreekSport</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #003366;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+        .iframe-container {
+            position: relative;
+            width: 50%; /* Smaller width for a smaller iframe */
+            padding-bottom: 28.125%; /* Adjust height to maintain a smaller aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            margin: 0 auto; /* Center the iframe on the page */
+        }
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .ad-notice {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #666;
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>20:00 | Θέλτα VS Βαλένθια --- 22:30 | Σεβίλλη VS Βιγιαρεάλ (Ποδόσφαιρο)</h1>
+    </div>
+    <div class="container">
+        <!-- Smaller iframe container -->
+        <div class="iframe-container">
+            <iframe src="https://foothubhd.live/cast/2/link2.php" width="100%" height="100%" marginheight="0" marginwidth="0" scrolling="no" frameborder="0" allowfullscreen allow="encrypted-media"></iframe>
+        </div>
+        <!-- Notice about ads supporting the service -->
+        <div class="ad-notice">
+            <p>Note: Ads help support our service and keep the streams free for everyone. Please consider not using ad blockers.</p>
+        </div>
+    </div>
+    <footer>
+        <p>Disclaimer: This website does not host any of the streams. For any DMCA complaints, please contact the streaming service.</p>
+    </footer>
+</body>
+</html>
