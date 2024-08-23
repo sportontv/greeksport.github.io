@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Overlay with Channel Controller</title>
+    <style>
+        /* Basic styling for the layout */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #333;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .tv-overlay {
+            width: 900px;
+            height: 500px;
+            background-color: black;
+            border: 10px solid #222;
+            position: relative;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        .tv-overlay iframe {
+            width: 100%;
+            height: 100%;
+        }
+        .tv-controller {
+            width: 200px;
+            background-color: #444;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .tv-controller h3 {
+            margin-top: 0;
+        }
+        .channel-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .channel-list li {
+            margin-bottom: 10px;
+        }
+        .channel-list li a {
+            color: white;
+            text-decoration: none;
+            background-color: #555;
+            padding: 8px;
+            display: block;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .channel-list li a:hover {
+            background-color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- TV Overlay -->
+    <div class="tv-overlay">
+        <iframe id="tv" src="" frameborder="0" allowfullscreen></iframe>
+        <h2>Επιλέξτε κανάλι χρησημοποιώντας το τηλεχειριστήριο</h2>
+    </div>
+
+    <!-- TV Controller -->
+    <div class="tv-controller">
+        <h3>Τηλεχειριστήριο</h3>
+        <ul class="channel-list">
+            <li><a href="#" onclick="changeChannel('https://foothubhd.live/greekchannels/ert1.html')">ERT 1</a></li>
+            <li><a href="#" onclick="changeChannel('https://foothubhd.live/greekchannels/ert2.html')">ERT 2</a></li>
+            <li><a href="#" onclick="changeChannel('https://foothubhd.live/greekchannels/ert3.html')">ERT 3</a></li>
+            <li><a href="#" onclick="changeChannel('https://foothubhd.live/greekchannels/alpha.html')">Alpha</a></li>
+            <li><a href="#" onclick="changeChannel('https://foothubhd.live/greekchannels/ant1.html')">ANT1</a></li>
+            <li><a href="#" onclick="changeChannel('https://foothubhd.live/greekchannels/mega.html')">Mega</a></li>
+            <li><a href="#" onclick="changeChannel('https://foothubhd.live/greekchannels/skai.html')">Skai</a></li>
+            <li><a href="#" onclick="changeChannel('https://foothubhd.live/greekchannels/open.html')">Open</a></li>
+            <li><a href="#" onclick="changeChannel('https://foothubhd.live/greekchannels/star.html')">Star</a></li>
+            <li><a href="#" onclick="changeChannel('https://foothubhd.live/greekchannels/action24.html')">Action 24</a></li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    // Function to change the TV channel
+    function changeChannel(channelUrl) {
+        const tv = document.getElementById('tv');
+        tv.src = channelUrl;
+    }
+</script>
+
+</body>
+</html>
